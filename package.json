@@ -89,9 +89,9 @@
     "prepublishOnly": "npm run release:check && npm run check"
   },
   "devDependencies": {
-    "esbuild": "^0.25.9",
+    "esbuild": "^0.28.2",
     "happy-dom": "^20.11.2",
-    "typescript": "^5.9.2",
-    "vitest": "^3.2.4"
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
   }
 }
