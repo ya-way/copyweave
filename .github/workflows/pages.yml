@@ -27,7 +27,7 @@ jobs:
       - run: npm run build
       - name: Refuse local recovery artifacts
         run: test -z "$(find demo -type f \( -name '*.backup' -o -name '*.bak' -o -name '*.old' -o -name '*.orig' -o -name '*.log' \) -print -quit)"
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v3
         with:
           path: demo
