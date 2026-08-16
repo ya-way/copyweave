@@ -7,7 +7,7 @@
   在真实页面中修改文字，保存为可携带 JSON，同时保留框架、字体、版式和代码所有权。
 </p>
 
-<p align="center"><a href="./README.md">English</a> · <a href="./demo">Demo</a> · <a href="./skill/copyweave-integrator">Agent Skill</a></p>
+<p align="center"><a href="./README.md">English</a> · <a href="https://ya-way.github.io/copyweave/?copyweave">在线体验</a> · <a href="./demo">Demo 源码</a> · <a href="./skill/copyweave-integrator">Agent Skill</a></p>
 
 > 当前是经过测试的 `0.1.0` 发布候选，不代表 npm 已经完成首发。在发布清单完成前，`npm install copyweave` 可能返回 404；请在此源码目录运行 `npm ci && npm run check` 进行评估。
 

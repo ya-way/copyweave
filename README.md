@@ -9,6 +9,7 @@
 
 <p align="center">
   <a href="#three-minute-start-after-npm-publication">Quick start</a> ·
+  <a href="https://ya-way.github.io/copyweave/?copyweave">Live demo</a> ·
   <a href="./demo">Demo</a> ·
   <a href="./README.zh-CN.md">简体中文</a> ·
   <a href="./skill/copyweave-integrator">Agent Skill</a> ·
