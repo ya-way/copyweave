@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">CopyWeave — Edit the words. Keep the design.</title>
+  <desc id="desc">A black editorial banner with coral threads weaving through the CopyWeave wordmark.</desc>
+  <rect width="1280" height="640" fill="#171713"/>
+  <g opacity=".16" stroke="#f2eee5">
+    <path d="M0 80H1280M0 160H1280M0 240H1280M0 320H1280M0 400H1280M0 480H1280M0 560H1280"/>
+    <path d="M80 0V640M160 0V640M240 0V640M320 0V640M400 0V640M480 0V640M560 0V640M640 0V640M720 0V640M800 0V640M880 0V640M960 0V640M1040 0V640M1120 0V640M1200 0V640"/>
+  </g>
+  <g fill="none" stroke="#ff4f2e" stroke-width="18">
+    <path d="M-40 126C175 30 282 219 457 139S779 35 1320 170"/>
+    <path d="M-40 610C194 646 316 560 493 602S823 646 1320 588"/>
+  </g>
+  <g transform="translate(78 78)">
+    <rect x="0" y="0" width="12" height="46" fill="#f2eee5"/>
+    <rect x="22" y="0" width="12" height="70" fill="#ff4f2e"/>
+    <rect x="44" y="0" width="12" height="34" fill="#f2eee5"/>
+    <text x="82" y="49" fill="#f2eee5" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" letter-spacing="-2">CopyWeave</text>
+  </g>
+  <text x="76" y="340" fill="#f2eee5" font-family="Arial, Helvetica, sans-serif" font-size="104" font-weight="800" letter-spacing="-7">Edit the words.</text>
+  <text x="76" y="447" fill="#ff4f2e" font-family="Arial, Helvetica, sans-serif" font-size="104" font-weight="800" letter-spacing="-7">Keep the design.</text>
+  <text x="82" y="554" fill="#aaa69b" font-family="Courier New, monospace" font-size="18" font-weight="700" letter-spacing="4">LOCAL-FIRST · FRAMEWORK-AGNOSTIC · ZERO RUNTIME DEPENDENCIES</text>
+  <g transform="translate(1088 520)" fill="#f2eee5">
+    <rect width="114" height="2"/>
+    <text x="0" y="32" font-family="Courier New, monospace" font-size="13" font-weight="700" letter-spacing="3">OSS / 001</text>
+  </g>
+</svg>

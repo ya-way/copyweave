@@ -1,0 +1,33 @@
+name: Feature request
+description: Propose a focused improvement with a concrete editing workflow.
+title: "idea: "
+labels: [enhancement, needs-triage]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Whose problem is this?
+      description: Describe the writer, developer, or agent workflow before the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Smallest useful change
+    validations:
+      required: true
+  - type: textarea
+    id: invariants
+    attributes:
+      label: Design and safety invariants
+      description: What must remain visually and operationally unchanged?
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This does not require CopyWeave to become a hosted CMS.
+          required: true
+

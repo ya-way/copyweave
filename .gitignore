@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+*.tgz
+*.backup
+*.bak
+*.old
+*.orig
+*.log
+.DS_Store
+.skill-validator-deps/
+copyweave.content.local.json
+demo/assets/copyweave.iife.js
+evals/runs/

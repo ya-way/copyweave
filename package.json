@@ -1,0 +1,97 @@
+{
+  "name": "copyweave",
+  "version": "0.1.0",
+  "description": "A local-first, framework-agnostic copy editor for existing websites.",
+  "keywords": [
+    "contenteditable",
+    "copywriting",
+    "inline-editor",
+    "local-first",
+    "static-site",
+    "vibe-coding",
+    "website-editor"
+  ],
+  "license": "MIT",
+  "author": "CopyWeave contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ya-way/copyweave.git"
+  },
+  "homepage": "https://github.com/ya-way/copyweave#readme",
+  "bugs": {
+    "url": "https://github.com/ya-way/copyweave/issues"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "unpkg": "./dist/copyweave.iife.js",
+  "jsdelivr": "./dist/copyweave.iife.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./schema": "./schema/copyweave.schema.json"
+  },
+  "bin": {
+    "copyweave": "bin/copyweave.mjs"
+  },
+  "files": [
+    "AGENTS.md",
+    "bin",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "demo",
+    "dist",
+    "docs",
+    "evals/README.md",
+    "evals/fixtures",
+    "llms.txt",
+    "README.zh-CN.md",
+    "ROADMAP.md",
+    "schema",
+    "scripts",
+    "SECURITY.md",
+    "skill",
+    "src",
+    "tests",
+    "tsconfig.build.json",
+    "tsconfig.json",
+    "vitest.config.ts",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs && tsc -p tsconfig.build.json",
+    "dev": "npm run build && node scripts/dev.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "doctor:demo": "node bin/copyweave.mjs doctor demo --strict",
+    "docs:check": "node scripts/docs-check.mjs",
+    "skill:check": "node scripts/skill-check.mjs",
+    "size": "node scripts/size-check.mjs",
+    "pack:check": "node scripts/pack-check.mjs",
+    "install:check": "node scripts/install-check.mjs",
+    "release:check": "node scripts/release-metadata-check.mjs",
+    "check": "npm run typecheck && npm test && npm run build && npm run size && npm run doctor:demo && npm run docs:check && npm run skill:check && npm run pack:check && npm run install:check",
+    "prepack": "npm run check",
+    "prepublishOnly": "npm run release:check && npm run check"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.9",
+    "happy-dom": "^20.11.2",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}

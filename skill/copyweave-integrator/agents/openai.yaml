@@ -1,0 +1,4 @@
+interface:
+  display_name: "CopyWeave Integrator"
+  short_description: "Make site copy editable without changing its design."
+  default_prompt: "Use $copyweave-integrator to add a local-first editable copy layer to this website and verify it in two passes."

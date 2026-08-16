@@ -1,0 +1,52 @@
+name: Bug report
+description: Report a reproducible CopyWeave problem.
+title: "bug: "
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping make human editing safer. Please remove private copy before posting.
+  - type: input
+    id: version
+    attributes:
+      label: CopyWeave version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options: [Browser editor, CLI serve/save, CLI doctor, CLI apply, Agent Skill, Documentation]
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Include the smallest safe HTML/config and exact commands.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Windows 11, Node 22, Chrome 140
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety checks
+      options:
+        - label: I removed secrets, customer copy, and session tokens.
+          required: true
+        - label: I searched existing issues.
+          required: true
+

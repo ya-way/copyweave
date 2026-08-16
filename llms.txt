@@ -1,0 +1,35 @@
+# CopyWeave
+
+> Edit the words. Keep the design. A local-first, framework-agnostic copy editor with zero browser runtime dependencies.
+
+The source checkout and release tarball contain the implementation/tests below. A dependency install is a consumer surface; do not assume its parent project installed CopyWeave's development dependencies.
+
+## Start
+
+- Release-candidate status: npm may return 404 until the owner completes `docs/RELEASE.md`; from source use `npm ci && npm run check`.
+- Install after publication: `npm install copyweave`
+- Mark durable text leaves: `data-copy-id="hero.title"`
+- Mount: `createCopyWeave({siteId, pageId, activation: "query"})`
+- Create content: `npx copyweave init <root> --site-id <id>`
+- Edit/save: `npx copyweave serve <built-root>`
+- Verify: `npx copyweave doctor <root> --strict --json`
+
+## Contracts
+
+- Public API: `src/types.ts`, README Browser API
+- Content schema: `schema/copyweave.schema.json`
+- CLI: `bin/copyweave.mjs`, README CLI
+- Invariants: `AGENTS.md`
+- Architecture: `docs/ARCHITECTURE.md`
+- Integration recipes: `docs/INTEGRATION.md`
+- Security: `docs/SECURITY-MODEL.md`
+- Limitations: README Honest limitations
+- Agent workflow: `skill/copyweave-integrator/SKILL.md`
+
+## Rules for agents
+
+- Prefer semantic `data-copy-id`; automatic IDs are migration-only.
+- Do not redesign, replace typography, or alter normal page interaction.
+- Never claim project save without HTTP disk confirmation.
+- Keep copy plain text and preserve valid content on every failure.
+- Run `npm run check`, then visually verify closed/open editor states on desktop and mobile.

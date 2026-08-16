@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:copyweave:schema:content-v1",
+  "title": "CopyWeave content",
+  "description": "Portable CopyWeave overrides. Runtime and CLI also enforce x-copyweave-maxTotalFields across all pages.",
+  "type": "object",
+  "x-copyweave-maxTotalFields": 5000,
+  "additionalProperties": false,
+  "required": ["format", "version", "siteId", "updatedAt", "pages"],
+  "properties": {
+    "format": {"const": "copyweave/content"},
+    "version": {"const": 1},
+    "siteId": {"$ref": "#/$defs/storeKey"},
+    "updatedAt": {"type": "string", "format": "date-time"},
+    "pages": {
+      "type": "object",
+      "maxProperties": 100,
+      "x-copyweave-maxTotalFields": 5000,
+      "propertyNames": {"$ref": "#/$defs/storeKey"},
+      "additionalProperties": {
+        "type": "object",
+        "maxProperties": 5000,
+        "propertyNames": {"$ref": "#/$defs/fieldKey"},
+        "additionalProperties": {"type": "string", "maxLength": 100000}
+      }
+    }
+  },
+  "$defs": {
+    "storeKey": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 240,
+      "pattern": "^[^\\u0000-\\u001F\\u007F]+$",
+      "not": {"enum": ["__proto__", "prototype", "constructor"]}
+    },
+    "fieldKey": {
+      "allOf": [
+        {"$ref": "#/$defs/storeKey"},
+        {
+          "anyOf": [
+            {"pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,239}$"},
+            {"pattern": "^auto:[^\\u0000-\\u001F\\u007F]+$"}
+          ]
+        }
+      ]
+    }
+  }
+}

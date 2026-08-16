@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" data-copyweave-site="copyweave-demo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CopyWeave edits website copy without dismantling the design." />
+    <title>CopyWeave — Edit the words. Keep the design.</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./assets/copyweave.iife.js"></script>
+    <script defer src="./demo.js"></script>
+  </head>
+  <body data-copy-page="home">
+    <a class="skip" href="#main" data-copy-id="a11y.skip">Skip to demo</a>
+    <header class="site-head">
+      <a class="brand" href="#main" aria-label="CopyWeave home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <strong data-copy-id="brand.name">CopyWeave</strong>
+      </a>
+      <p data-copy-id="header.promise">Local-first copy editing for finished websites</p>
+      <a class="source" href="#workflow" data-copy-id="header.guide">How it works ↓</a>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-copy-id="hero.eyebrow">THE HUMAN LAYER / 001</p>
+          <h1 id="hero-title">
+            <span data-copy-id="hero.title.line1">Edit the words.</span>
+            <span data-copy-id="hero.title.line2">Keep the design.</span>
+          </h1>
+          <p class="lede" data-copy-id="hero.summary">CopyWeave adds a removable writing layer to the site you already built—no CMS, account, or framework lock-in.</p>
+          <div class="hero-actions">
+            <button type="button" data-open-editor><span data-copy-id="hero.cta">Try editing this page</span><b aria-hidden="true">↘</b></button>
+            <code data-copy-id="hero.command">npm install copyweave</code>
+          </div>
+        </div>
+        <div class="weave" aria-label="A visual model of source copy, project copy, and browser draft layers">
+          <div class="weave-label"><span data-copy-id="weave.label">THREE LAYERS / ONE VOICE</span><b data-copy-id="weave.status">LIVE</b></div>
+          <div class="thread thread-a"><span data-copy-id="weave.source">HTML source</span><i></i></div>
+          <div class="thread thread-b"><span data-copy-id="weave.project">Project JSON</span><i></i></div>
+          <div class="thread thread-c"><span data-copy-id="weave.draft">Browser draft</span><i></i></div>
+          <div class="woven-word" data-copy-id="weave.result">human</div>
+        </div>
+      </section>
+
+      <section class="proof" aria-labelledby="proof-title">
+        <div class="section-index"><span data-copy-id="proof.index">01</span><i></i><span data-copy-id="proof.kicker">WHAT STAYS TRUE</span></div>
+        <h2 id="proof-title" data-copy-id="proof.title">The editor leaves the design where it found it.</h2>
+        <div class="proof-grid">
+          <article>
+            <span class="proof-no" data-copy-id="proof.type.index">A</span>
+            <h3 data-copy-id="proof.type.title">Typography inherits</h3>
+            <p data-copy-id="proof.type.copy">Fields keep the font, weight, tracking, color, and rhythm already defined by the site.</p>
+          </article>
+          <article>
+            <span class="proof-no" data-copy-id="proof.data.index">B</span>
+            <h3 data-copy-id="proof.data.title">Content stays portable</h3>
+            <p data-copy-id="proof.data.copy">Committed copy is plain, versioned JSON. Drafts remain local until a person chooses to save.</p>
+          </article>
+          <article>
+            <span class="proof-no" data-copy-id="proof.control.index">C</span>
+            <h3 data-copy-id="proof.control.title">Developers keep control</h3>
+            <p data-copy-id="proof.control.copy">Semantic field IDs survive layout changes, while ETags stop one writer from silently replacing another.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="workflow" id="workflow" aria-labelledby="workflow-title">
+        <div>
+          <p class="eyebrow" data-copy-id="workflow.kicker">A SMALL, HONEST WORKFLOW</p>
+          <h2 id="workflow-title" data-copy-id="workflow.title">Write in the page. Save to the project.</h2>
+        </div>
+        <ol>
+          <li><b data-copy-id="workflow.step1.index">01</b><span data-copy-id="workflow.step1">Mark durable fields with semantic IDs.</span></li>
+          <li><b data-copy-id="workflow.step2.index">02</b><span data-copy-id="workflow.step2">Let a writer edit the real composition.</span></li>
+          <li><b data-copy-id="workflow.step3.index">03</b><span data-copy-id="workflow.step3">Review the JSON diff and ship it.</span></li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <p><strong data-copy-id="footer.name">CopyWeave</strong><span data-copy-id="footer.note">Built for the part of vibe coding that still needs a person.</span></p>
+      <p data-copy-id="footer.license">MIT · No telemetry · Zero runtime dependencies</p>
+    </footer>
+  </body>
+</html>
